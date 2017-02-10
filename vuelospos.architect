@@ -45,10 +45,10 @@
     <column id="COL10" populated="true" UUID="4a4c3d48-01d1-496b-ae96-f3bc8906a23a" autoIncrement="false" autoIncrementSequenceName="ticket_vuelo_seq" defaultValue="" name="vuelo" nullable="0" physicalName="vuelo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL11" populated="true" UUID="37e87e81-f034-4423-aa61-bb9166f26bc3" autoIncrement="false" autoIncrementSequenceName="ticket_clase_seq" defaultValue="" name="clase" nullable="0" physicalName="clase" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL11" populated="true" UUID="71820210-a10e-424b-8ed3-0fa0f2650ec6" autoIncrement="false" autoIncrementSequenceName="ticket_asiento_seq" defaultValue="" name="asiento" nullable="0" physicalName="asiento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL12" populated="true" UUID="71820210-a10e-424b-8ed3-0fa0f2650ec6" autoIncrement="false" autoIncrementSequenceName="ticket_asiento_seq" defaultValue="" name="asiento" nullable="0" physicalName="asiento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL12" populated="true" UUID="58a7320f-cd37-42b9-8eeb-76bc2db92cf2" autoIncrement="false" autoIncrementSequenceName="ticket_precio_seq" defaultValue="" name="precio" nullable="0" physicalName="precio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
      <remarks></remarks>
     </column>
     </folder>
@@ -85,16 +85,13 @@
     </index>
    </folder>
   </table>
-  <table id="TAB21" populated="true" UUID="4cc12bcd-c8bf-4f7d-ab96-a54d6287e920" name="clase" objectType="TABLE" physicalName="clase" >
+  <table id="TAB21" populated="true" UUID="d645a9b2-d9ab-47cf-8acc-978ded81a8df" name="lugar" objectType="TABLE" physicalName="lugar" >
    <remarks></remarks>
    <folder id="FOLTAB211" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL22" populated="true" UUID="722584e6-4032-492e-b33a-a5b6be7225c8" autoIncrement="true" autoIncrementSequenceName="clase_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL22" populated="true" UUID="96084355-6118-4cfd-8a4f-08b7e5b008a9" autoIncrement="true" autoIncrementSequenceName="lugar_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL23" populated="true" UUID="b9d48a91-930b-4308-9dea-04ba7725fc52" autoIncrement="false" autoIncrementSequenceName="clase_nombre_seq" defaultValue="" name="nombre" nullable="0" physicalName="nombre" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
-    </column>
-    <column id="COL24" populated="true" UUID="9949ed63-199d-4484-b9d8-c49b04cd1ca7" autoIncrement="false" autoIncrementSequenceName="clase_asientos_seq" defaultValue="" name="num_asientos" nullable="0" physicalName="num_asientos" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL23" populated="true" UUID="0693063e-5d68-4599-b69f-c3d6550b97dd" autoIncrement="false" autoIncrementSequenceName="lugar_nombre_seq" defaultValue="" name="nombre" nullable="0" physicalName="nombre" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     </folder>
@@ -103,84 +100,26 @@
     <folder id="FOLTAB212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB214" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX25" populated="true" UUID="a030ad03-34b0-45fd-bd06-64a50ade4737" clustered="false" name="clase_pk" physicalName="clase_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC26" populated="true" UUID="f1a94584-19de-47fb-b9fd-c4027007786b" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="id" physicalName="id" />
-    </index>
-   </folder>
-  </table>
-  <table id="TAB27" populated="true" UUID="91fa19f2-66d9-4692-a3e0-487c5cd6d89a" name="vueloclase" objectType="TABLE" physicalName="vueloclase" >
-   <remarks></remarks>
-   <folder id="FOLTAB271" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL28" populated="true" UUID="83f88ebc-8939-4e99-ad85-38979e5501f1" autoIncrement="true" autoIncrementSequenceName="vueloclase_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL29" populated="true" UUID="22a571fd-614d-4687-a554-1e8cace2a3dd" autoIncrement="false" autoIncrementSequenceName="vueloclase_clase_seq" defaultValue="" name="clase" nullable="0" physicalName="clase" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL30" populated="true" UUID="26b0d216-9f57-40cd-b8e2-0f9b5fe9cfc3" autoIncrement="false" autoIncrementSequenceName="vueloclase_vuelo_seq" defaultValue="" name="vuelo" nullable="0" physicalName="vuelo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL31" populated="true" UUID="38a23e29-4889-4266-a771-c75a0c0b22b4" autoIncrement="false" autoIncrementSequenceName="vueloclase_preciomay_seq" defaultValue="" name="preciomay" nullable="0" physicalName="preciomay" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
-     <remarks></remarks>
-    </column>
-    <column id="COL32" populated="true" UUID="be23a03a-28d3-42f1-8435-0099e982a615" autoIncrement="false" autoIncrementSequenceName="vueloclase_preciomen_seq" defaultValue="" name="preciomen" nullable="0" physicalName="preciomen" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
-     <remarks></remarks>
-    </column>
-    </folder>
-    <folder id="FOLTAB273" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
-    </folder>
-    <folder id="FOLTAB272" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
-    </folder>
-    <folder id="FOLTAB274" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX33" populated="true" UUID="08ec2ffd-f5f5-4b19-8eb7-bd4a20bd84b3" clustered="false" name="vueloclase_pk" physicalName="vueloclase_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC34" populated="true" UUID="38679568-389c-43ad-b185-e1b25879abe9" ascendingOrDescending="UNSPECIFIED" column-ref="COL28" name="id" physicalName="id" />
-    </index>
-   </folder>
-  </table>
-  <table id="TAB35" populated="true" UUID="d645a9b2-d9ab-47cf-8acc-978ded81a8df" name="lugar" objectType="TABLE" physicalName="lugar" >
-   <remarks></remarks>
-   <folder id="FOLTAB351" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL36" populated="true" UUID="96084355-6118-4cfd-8a4f-08b7e5b008a9" autoIncrement="true" autoIncrementSequenceName="lugar_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL37" populated="true" UUID="0693063e-5d68-4599-b69f-c3d6550b97dd" autoIncrement="false" autoIncrementSequenceName="lugar_nombre_seq" defaultValue="" name="nombre" nullable="0" physicalName="nombre" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
-    </column>
-    </folder>
-    <folder id="FOLTAB353" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
-    </folder>
-    <folder id="FOLTAB352" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
-    </folder>
-    <folder id="FOLTAB354" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX38" populated="true" UUID="7953ebf5-d29f-4613-a161-1560898ba3b4" clustered="false" name="lugar_pk" physicalName="lugar_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC39" populated="true" UUID="c582cfd7-500a-488a-a6bc-d643f4591490" ascendingOrDescending="UNSPECIFIED" column-ref="COL36" name="id" physicalName="id" />
+    <index id="IDX24" populated="true" UUID="7953ebf5-d29f-4613-a161-1560898ba3b4" clustered="false" name="lugar_pk" physicalName="lugar_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC25" populated="true" UUID="c582cfd7-500a-488a-a6bc-d643f4591490" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL40" populated="true" UUID="9785f71e-6313-45bf-b76f-adc0a5559767" deferrability="7" deleteRule="3" fk-table-ref="TAB27" fkCardinality="7" identifying="true" name="vuelo_vueloclase_fk" physicalName="vuelo_vueloclase_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP41" populated="true" UUID="e8a8aad5-6910-4d47-8aff-43f9749dac0d" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL26" populated="true" UUID="07715ffc-0900-463d-bbfc-c6774a2acd6b" deferrability="7" deleteRule="3" fk-table-ref="TAB15" fkCardinality="7" identifying="true" name="vuelo_escala_fk" physicalName="vuelo_escala_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP27" populated="true" UUID="d87fc34f-9fe3-4b5e-a6f7-8c26b9c076f7" fk-column-ref="COL17" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL42" populated="true" UUID="07715ffc-0900-463d-bbfc-c6774a2acd6b" deferrability="7" deleteRule="3" fk-table-ref="TAB15" fkCardinality="7" identifying="true" name="vuelo_escala_fk" physicalName="vuelo_escala_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP43" populated="true" UUID="d87fc34f-9fe3-4b5e-a6f7-8c26b9c076f7" fk-column-ref="COL17" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL28" populated="true" UUID="bc9b7302-b269-46ec-9708-dbdd443a2441" deferrability="7" deleteRule="3" fk-table-ref="TAB8" fkCardinality="7" identifying="true" name="vuelo_ticket_fk" physicalName="vuelo_ticket_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP29" populated="true" UUID="9ef3e0b6-ef36-453e-8b7f-19e6d7153a9e" fk-column-ref="COL10" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL44" populated="true" UUID="bc9b7302-b269-46ec-9708-dbdd443a2441" deferrability="7" deleteRule="3" fk-table-ref="TAB8" fkCardinality="7" identifying="true" name="vuelo_ticket_fk" physicalName="vuelo_ticket_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP45" populated="true" UUID="9ef3e0b6-ef36-453e-8b7f-19e6d7153a9e" fk-column-ref="COL10" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL30" populated="true" UUID="3f3a964c-c401-4605-a3ff-0f4b3770d071" deferrability="7" deleteRule="3" fk-table-ref="TAB15" fkCardinality="7" identifying="true" name="lugar_escala_fk" physicalName="lugar_escala_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP31" populated="true" UUID="d975653b-53b3-4a01-9459-f7506c7593e8" fk-column-ref="COL18" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
    </relationship>
-   <relationship id="REL46" populated="true" UUID="56ea03b3-4143-4dcd-a092-d9674def4ab0" deferrability="7" deleteRule="3" fk-table-ref="TAB27" fkCardinality="7" identifying="true" name="clase_vueloclase_fk" physicalName="clase_vueloclase_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP47" populated="true" UUID="60160575-ac58-4753-acc3-4f68eeb8f7db" fk-column-ref="COL29" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
+   <relationship id="REL32" populated="true" UUID="f4ef94d0-2247-4a26-940e-aa0724017083" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="lugar_vuelo_fk" physicalName="lugar_vuelo_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP33" populated="true" UUID="6a68d087-b419-4b3a-b00d-afcc2e412179" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
    </relationship>
-   <relationship id="REL48" populated="true" UUID="71dc1054-49f1-4cd9-bdf5-216afdddaf34" deferrability="7" deleteRule="3" fk-table-ref="TAB8" fkCardinality="7" identifying="true" name="clase_ticket_fk" physicalName="clase_ticket_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP49" populated="true" UUID="764bd7d8-28b1-44c8-b5dd-56ed5bbb7d37" fk-column-ref="COL11" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
-   </relationship>
-   <relationship id="REL50" populated="true" UUID="3f3a964c-c401-4605-a3ff-0f4b3770d071" deferrability="7" deleteRule="3" fk-table-ref="TAB15" fkCardinality="7" identifying="true" name="lugar_escala_fk" physicalName="lugar_escala_fk" pk-table-ref="TAB35" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP51" populated="true" UUID="d975653b-53b3-4a01-9459-f7506c7593e8" fk-column-ref="COL18" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL36" />
-   </relationship>
-   <relationship id="REL52" populated="true" UUID="f4ef94d0-2247-4a26-940e-aa0724017083" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="lugar_vuelo_fk" physicalName="lugar_vuelo_fk" pk-table-ref="TAB35" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP53" populated="true" UUID="6a68d087-b419-4b3a-b00d-afcc2e412179" fk-column-ref="COL4" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL36" />
-   </relationship>
-   <relationship id="REL54" populated="true" UUID="d38b2128-5209-4bf1-b5d4-2fb44e8e7263" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="lugar_vuelo_fk1" physicalName="lugar_vuelo_fk1" pk-table-ref="TAB35" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP55" populated="true" UUID="4e5e3a54-e61d-4151-bf07-51cfa38826bf" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL36" />
+   <relationship id="REL34" populated="true" UUID="d38b2128-5209-4bf1-b5d4-2fb44e8e7263" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="lugar_vuelo_fk1" physicalName="lugar_vuelo_fk1" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP35" populated="true" UUID="4e5e3a54-e61d-4151-bf07-51cfa38826bf" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
    </relationship>
   </relationships>
  </target-database>
@@ -189,19 +128,14 @@
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="404" y="31" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB8" x="175" y="24" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB8" x="157" y="88" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB15" x="604" y="139" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB21" x="72" y="182" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB27" x="244" y="201" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB35" x="445" y="310" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL46" pkConnection="0.5858585858585859" fkConnection="0.704225352112676" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL40" pkConnection="0.6619718309859155" fkConnection="0.3380281690140845" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL50" pkConnection="0.6947368421052632" fkConnection="0.2767857142857143" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL42" pkConnection="0.704225352112676" fkConnection="0.29577464788732394" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL52" pkConnection="0.11578947368421053" fkConnection="0.5206611570247934" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL44" pkConnection="0.16470588235294117" fkConnection="0.8" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL48" pkConnection="0.8" fkConnection="0.16964285714285715" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL54" pkConnection="0.3263157894736842" fkConnection="0.6859504132231405" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-pane table-ref="TAB21" x="445" y="310" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL30" pkConnection="0.6947368421052632" fkConnection="0.2767857142857143" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL26" pkConnection="0.704225352112676" fkConnection="0.29577464788732394" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL32" pkConnection="0.11578947368421053" fkConnection="0.5206611570247934" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL28" pkConnection="0.16470588235294117" fkConnection="0.8" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL34" pkConnection="0.3263157894736842" fkConnection="0.6859504132231405" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
