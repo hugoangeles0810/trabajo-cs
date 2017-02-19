@@ -16,7 +16,7 @@
           }
         })
       },
-      minLength: 2,
+      minLength: 0,
       select: function( event, ui ) {
         $( "#origen" ).val( ui.item.nombre );
         return false;
@@ -40,7 +40,7 @@
           }
         })
       },
-      minLength: 2,
+      minLength: 0,
       select: function( event, ui ) {
         $( "#destino" ).val( ui.item.nombre );
         return false;
@@ -49,12 +49,12 @@
     .autocomplete('instance')._renderItem = renderItem;
 
     $('#desde').datepicker({
-      dateFormat: 'dd/mm/yy',
+      dateFormat: 'yy/mm/dd',
       minDate: 0
     });
 
     $('#hasta').datepicker({
-      dateFormat: 'dd/mm/yy',
+      dateFormat: 'yy/mm/dd',
       minDate: 0
     });
 

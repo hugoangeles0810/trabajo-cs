@@ -17,6 +17,10 @@
 }
 /* Fin: Helpers */
 
+.ui-datepicker {
+  z-index: 3 !important;
+}
+
 .header-main {
   padding: 5px 0;
   height: 60px;
@@ -178,6 +182,90 @@ img.banner {
 
 .card .description p .price {
   font-size: 24px;
+}
+
+.results {
+  position: relative;
+  min-height: 400px;
+}
+
+.loader {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92px;
+}
+
+.loader p {
+  text-align: center;
+  margin-top: 7px;
+}
+
+.bg-gray {
+  background-color: #F5F5F5;
+}
+
+.item-row {
+  padding: 4px;
+}
+
+.vuelo {
+  min-height: 82px;
+  border: 1px solid #666666;
+  padding: 5px;
+  margin-bottom: 14px;
+}
+
+.vuelo .fecha {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.vuelo .lugar-short, .vuelo .lugar-large {
+  display: block;
+}
+
+.vuelo .lugar-short {
+  color: #3CC8F1;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.vuelo .lugar-large {
+  font-size: 12px;
+  color: #666666;
+}
+
+.vuelo .aerolinea {
+  color: #666666;
+  font-size: 16px; 
+}
+
+.vuelo .horario {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.vuelo .comprar-div {
+  min-height: 82px;
+  background-color: #FFF157;
+  padding: 14px;
+}
+
+.vuelo .comprar-div p {
+  font-size: 22px;
+  color: #666666;
+}
+
+.btn-comprar {
+  background-color: #F7432C;
+  color: white;
+}
+
+.currency {
+  color: #666666;
+  font-size: 13px;
 }
 
 footer {

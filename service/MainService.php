@@ -1,5 +1,6 @@
 <?php
 
+require_once BASEPATH . '/util/VuelosParams.php';
 require_once BASEPATH . '/service/MySQLService.php';
 
 class MainService{
@@ -10,8 +11,15 @@ class MainService{
     $this->mysqlService = new MySQLService();
   } 
 
-  function buscarVuelos(VuelosParams $vuelosParams){
-    echo "Holi";
+  function buscarVuelos(VuelosParams $params){
+    $domXml = new DOMDocument('1.0', 'UTF-8');
+
+    $rootElem = $domXml->createElement('vuelos');
+    $domXml->appendChild($rootElem);
+    $this->mysqlService->buscarVuelos($params, $domXml, $rootElem);
+
+    $domXml->formatOutput = true;
+    return $domXml;
   }
 
   function obtenerLugar($term) {
@@ -27,6 +35,7 @@ class MainService{
       $xmlRoot->appendChild($xmlLugar);
     }
 
+    $domXml->formatOutput = true;
     return $domXml;
 
   }
