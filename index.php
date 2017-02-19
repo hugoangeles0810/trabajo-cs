@@ -1,3 +1,6 @@
+<?php
+  require_once 'config.php';
+?>
 <!doctype html>
 <html class="no-js" lang="es">
   <head>
@@ -10,6 +13,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
@@ -50,13 +54,13 @@
                 <div class="col-xs-6 ph-5">
                   <div class="form-group">
                     <label for="origen">Origen</label>
-                    <input id="origen" type="text" class="form-control" placeholder="Ingresa desde donde viajas">
+                    <input id="origen" type="text" class="form-control lugar" placeholder="Ingresa desde donde viajas">
                   </div>
                 </div>
                 <div class="col-xs-6 ph-5">
                   <div class="form-group">
                     <label for="destino">Destino</label>
-                    <input id="destino" type="text" class="form-control" placeholder="Ingresa hasta dónde viajas">
+                    <input id="destino" type="text" class="form-control lugar" placeholder="Ingresa hasta dónde viajas">
                   </div>
                 </div>
               </div>
@@ -64,7 +68,7 @@
                 <div class="col-xs-6 ph-5">
                   <div class="form-group">
                     <label>
-                      <input type="checkbox" name="fecha" value="y">
+                      <input id="no-fechas" type="checkbox" name="fecha" value="y">
                       Todavía no he decidido mis fechas
                     </label>
                   </div>
@@ -73,14 +77,14 @@
               <div class="row-fluid clearfix">
                 <div class="col-xs-3 ph-5">
                   <div class="form-group">
-                    <label for="partida">¿En que fecha?</label>
-                    <input type="date" class="form-control" placeholder="Partida">
+                    <label for="desde">¿En que fecha?</label>
+                    <input type="text" id="desde" class="form-control" placeholder="Desde">
                   </div>
                 </div>
                 <div class="col-xs-3 ph-5">
                   <div class="form-group">
-                    <label class="only-ida"><input type="checkbox" name="soloida"> Solo ida</label>
-                    <input type="date" class="form-control" placeholder="Regreso">
+                    <label class="only-ida"><input id="solo-ida" type="checkbox" name="soloida"> Solo ida</label>
+                    <input type="text" id="hasta" class="form-control" placeholder="Regreso">
                   </div>
                 </div>
                 <div class="col-xs-3 ph-5">
@@ -237,5 +241,9 @@
         </div>
       </div>
     </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
