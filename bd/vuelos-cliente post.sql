@@ -11,7 +11,7 @@ Target Server Type    : PGSQL
 Target Server Version : 90404
 File Encoding         : 65001
 
-Date: 2017-02-10 01:23:51
+Date: 2017-02-19 21:52:13
 */
 
 
@@ -25,6 +25,7 @@ CREATE SEQUENCE "public"."escala_id_seq"
  MAXVALUE 9223372036854775807
  START 1
  CACHE 1;
+SELECT setval('"public"."escala_id_seq"', 1, true);
 
 -- ----------------------------
 -- Sequence structure for lugar_id_seq
@@ -34,8 +35,9 @@ CREATE SEQUENCE "public"."lugar_id_seq"
  INCREMENT 1
  MINVALUE 1
  MAXVALUE 9223372036854775807
- START 1
+ START 4
  CACHE 1;
+SELECT setval('"public"."lugar_id_seq"', 4, true);
 
 -- ----------------------------
 -- Sequence structure for vuelo_id_seq
@@ -45,8 +47,9 @@ CREATE SEQUENCE "public"."vuelo_id_seq"
  INCREMENT 1
  MINVALUE 1
  MAXVALUE 9223372036854775807
- START 1
+ START 8
  CACHE 1;
+SELECT setval('"public"."vuelo_id_seq"', 8, true);
 
 -- ----------------------------
 -- Table structure for escala
@@ -62,6 +65,11 @@ WITH (OIDS=FALSE)
 ;
 
 -- ----------------------------
+-- Records of escala
+-- ----------------------------
+INSERT INTO "public"."escala" VALUES ('1', '1', '3');
+
+-- ----------------------------
 -- Table structure for lugar
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."lugar";
@@ -72,6 +80,13 @@ CREATE TABLE "public"."lugar" (
 WITH (OIDS=FALSE)
 
 ;
+
+-- ----------------------------
+-- Records of lugar
+-- ----------------------------
+INSERT INTO "public"."lugar" VALUES ('1', 'Lima, Peru');
+INSERT INTO "public"."lugar" VALUES ('2', 'Piura, Peru');
+INSERT INTO "public"."lugar" VALUES ('3', 'Arequipa, Peru');
 
 -- ----------------------------
 -- Table structure for ticket
@@ -88,6 +103,10 @@ WITH (OIDS=FALSE)
 ;
 
 -- ----------------------------
+-- Records of ticket
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for vuelo
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."vuelo";
@@ -100,6 +119,15 @@ CREATE TABLE "public"."vuelo" (
 WITH (OIDS=FALSE)
 
 ;
+
+-- ----------------------------
+-- Records of vuelo
+-- ----------------------------
+INSERT INTO "public"."vuelo" VALUES ('1', '2017-03-01 17:26:04', '1', '2');
+INSERT INTO "public"."vuelo" VALUES ('3', '2017-07-20 17:26:33', '3', '2');
+INSERT INTO "public"."vuelo" VALUES ('4', '2017-07-20 17:26:44', '3', '1');
+INSERT INTO "public"."vuelo" VALUES ('5', '2017-03-24 17:27:14', '2', '3');
+INSERT INTO "public"."vuelo" VALUES ('6', '2017-02-23 17:27:24', '2', '1');
 
 -- ----------------------------
 -- Alter Sequences Owned By 
