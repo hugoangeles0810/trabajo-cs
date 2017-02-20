@@ -8,6 +8,11 @@ define(MYSQL_DB, "vuelos-cliente");
 define(MYSQL_USER, "root");
 define(MYSQL_PASS, "123456");
 
+define(POSTG_HOST, "localhost");
+define(POSTG_DB, "vuelos-cliente");
+define(POSTG_USER, "root");
+define(POSTG_PASS, "123456");
+
 
 if (DEBUG) {
   ini_set('display_errors', 1);

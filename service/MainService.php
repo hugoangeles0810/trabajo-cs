@@ -2,13 +2,16 @@
 
 require_once BASEPATH . '/util/VuelosParams.php';
 require_once BASEPATH . '/service/MySQLService.php';
+require_once BASEPATH . '/service/POSTGService.php';
 
 class MainService{
 
   var $mysqlService;
+  var $postgService;
 
   function __construct() {
     $this->mysqlService = new MySQLService();
+	$this->postgService = new POSTGSERVICE();
   } 
 
   function buscarVuelos(VuelosParams $params){
@@ -17,6 +20,7 @@ class MainService{
     $rootElem = $domXml->createElement('vuelos');
     $domXml->appendChild($rootElem);
     $this->mysqlService->buscarVuelos($params, $domXml, $rootElem);
+	$this->postgService->buscarVuelos($params, $domXml, $rootElem);
 
     $domXml->formatOutput = true;
     return $domXml;
