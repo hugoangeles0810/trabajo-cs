@@ -10,7 +10,7 @@ define(MYSQL_PASS, "123456");
 
 define(POSTG_HOST, "localhost");
 define(POSTG_DB, "vuelos-cliente");
-define(POSTG_USER, "root");
+define(POSTG_USER, "postgres");
 define(POSTG_PASS, "123456");
 
 

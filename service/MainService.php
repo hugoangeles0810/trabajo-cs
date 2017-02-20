@@ -11,7 +11,7 @@ class MainService{
 
   function __construct() {
     $this->mysqlService = new MySQLService();
-	$this->postgService = new POSTGSERVICE();
+    $this->postgService = new POSTGService();
   } 
 
   function buscarVuelos(VuelosParams $params){
