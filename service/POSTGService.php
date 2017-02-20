@@ -14,7 +14,8 @@ class POSTGService implements VuelosService {
              "FROM vuelo v " .
              "INNER JOIN lugar origen on origen.id = v.origen " . 
              "INNER JOIN lugar destino  on destino.id = v.destino " .
-             "where 1 ";
+             "where TRUE ";
+
 
     if ($params->getOrigen() != null && 
         $params->getDestino() != null) {
@@ -33,15 +34,16 @@ class POSTGService implements VuelosService {
       }
     }
 
-    $result = $con->query($query);
+    $result = pg_query($con, $query);
 
-    if ($result->num_rows > 0) {
-      while($row = $result->fetch_assoc()) {
+    if ($result) {
+      while($row = pg_fetch_row($result)) {
         $vueloElem = $doc->createElement('vuelo');
-        $vueloElem->appendChild($doc->createElement('id', $row['id']));
-        $vueloElem->appendChild($doc->createElement('origen', $row['origen']));
-        $vueloElem->appendChild($doc->createElement('destino', $row['destino']));
-        $vueloElem->appendChild($doc->createElement('fecha', $row['fecha']));
+        $vueloElem->appendChild($doc->createElement('id', $row[0]));
+        $vueloElem->appendChild($doc->createElement('origen', $row[1]));
+        $vueloElem->appendChild($doc->createElement('destino', $row[2]));
+        $vueloElem->appendChild($doc->createElement('fecha', $row[3]));
+        $vueloElem->appendChild($doc->createElement('aerolinea', 'Latam Airlines'));
 
         $rootElem->appendChild($vueloElem);
       }
@@ -70,6 +72,11 @@ class POSTGService implements VuelosService {
   }
 
   private function getConnection() {
-    return new mysqli(POSTG_HOST, POSTG_USER, POSTG_PASS, POSTG_DB);
+    $conn_string = "host=" . POSTG_HOST . 
+                  " port=5432" . 
+                  " dbname=" . POSTG_DB .
+                  " user=" . POSTG_USER . 
+                  " password=" . POSTG_PASS;
+    return pg_connect($conn_string);
   }
 }

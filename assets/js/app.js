@@ -16,7 +16,8 @@
                   id: $('id', this).text(),
                   origen: $('origen', this).text(),
                   destino: $('destino', this).text(),
-                  fecha: $('fecha', this).text()
+                  fecha: $('fecha', this).text(),
+                  aerolinea: $('aerolinea', this).text()
                 }
               });
               $scope.vuelos = datos;

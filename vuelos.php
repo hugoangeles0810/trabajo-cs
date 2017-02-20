@@ -46,7 +46,7 @@
               </div>
               <div class="row item-row">
                 <div class="col-xs-6">
-                  <span class="aerolinea">Latam Airlines</span>
+                  <span class="aerolinea">{{ vuelo.aerolinea }}</span>
                 </div>
                 <div class="col-xs-4">
                   <span class="horario">{{ vuelo.fecha | hora }}</span>

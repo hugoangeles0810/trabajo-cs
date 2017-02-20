@@ -41,6 +41,7 @@ class MySQLService implements VuelosService {
         $vueloElem->appendChild($doc->createElement('origen', $row['origen']));
         $vueloElem->appendChild($doc->createElement('destino', $row['destino']));
         $vueloElem->appendChild($doc->createElement('fecha', $row['fecha']));
+        $vueloElem->appendChild($doc->createElement('aerolinea', 'Avianca'));
 
         $rootElem->appendChild($vueloElem);
       }
